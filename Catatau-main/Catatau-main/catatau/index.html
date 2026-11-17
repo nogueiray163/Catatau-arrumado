@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confeitaria Catatau</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="topo">
+
+            <h1 class="logo">Catatau</h1>
+
+            <input type="text" placeholder="O que você procura?">
+
+            <div class="usuario">♡ Minha conta</div>
+
+            <button class="carrinho" id="carrinho-btn">
+     Carrinho (<span id="carrinho-contador">0</span>)
+</button>
+
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#bolos">Bolos</a>
+            <a href="#tortas">Tortas</a>
+            <a href="#doces">Doces</a>
+            <a href="#bebidas">Bebidas</a>
+            <a href="#salgados">Salgados</a>
+            <a href="#sobre">Sobre nós</a>
+        </nav>
+    </header>
+
+<aside class="painel-carrinho" id="painel-carrinho">
+    <h2>Meu carrinho </h2>
+
+    <div id="itens-carrinho">
+        <p>Seu carrinho está vazio.</p>
+    </div>
+
+    <h3>Total: R$ <span id="total-carrinho">0,00</span></h3>
+
+    <button id="fechar-carrinho">
+        Continuar comprando
+    </button>
+
+    <button id="ir-pagamento">
+        Ir para o pagamento
+    </button>
+</aside>
+
+<section class="modal-pagamento" id="modal-pagamento">
+    <div class="conteudo-pagamento">
+        <button id="fechar-pagamento" class="fechar">
+            ✕
+        </button>
+
+        <h2>Finalizar pedido</h2>
+        <p>Escolha sua forma de pagamento:</p>
+
+        <label>
+            <input type="radio" name="pagamento" value="Pix">
+            Pix
+        </label>
+
+        <label>
+            <input type="radio" name="pagamento" value="Dinheiro">
+            Dinheiro
+        </label>
+
+<div id="area-dinheiro" style="display: none;">
+    <p>Quanto você vai pagar?</p>
+
+    <input
+        type="number"
+        id="valor-pago"
+        placeholder="Digite o valor em R$"
+        min="0"
+        step="0.01"
+    >
+
+    <p>
+        Troco: R$ <strong id="valor-troco">0,00</strong>
+    </p>
+</div>
+
+
+   
+        <label>
+            <input type="radio" name="pagamento" value="Cartão">
+            Cartão
+        </label>
+
+        <div id="resumo-pedido"></div>
+
+        <button id="confirmar-pedido">
+            Confirmar pedido
+        </button>
+    </div>
+</section>
+
+</aside>
+
+    <main>
+
+        <section class="banner" id="inicio">
+
+            <div class="banner-texto">
+                <span>SEJA BEM-VINDO À CATATAU!</span>
+
+                <h2>Sabor que encanta,</h2>
+                <h3>momentos que ficam!</h3>
+
+                <p>
+                    Descubra nossas delícias preparadas
+                    com carinho especialmente para você.
+                </p>
+
+                <a href="#bolos" class="botao">
+                    Conheça nossos produtos
+                </a>
+            </div>
+
+        </section>
+
+        <section class="categorias">
+            <h2>Explore nossas delícias</h2>
+
+            <div class="categorias-container">
+
+                <a href="#bolos"><br>Bolos</a>
+                <a href="#tortas"><br>Tortas</a>
+                <a href="#doces"><br>Doces</a>
+                <a href="#bebidas"><br>Bebidas</a>
+                <a href="#salgados"><br>Salgados</a>
+
+            </div>
+        </section>
+
+        <section class="produtos" id="bolos">
+            <h2>Nossos bolos</h2>
+            <p>Uma fatia de felicidade em cada pedaço!</p>
+
+            <div class="produtos-container">
+
+                <article class="produto">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500" alt="Bolo de chocolate">
+                    <article class="produto">
+   
+
+    <h3>Bolo de chocolate</h3>
+
+    <p>Massa fofinha com cobertura cremosa.</p>
+
+  <strong>R$12,00</strong>
+    <button class="adicionar-carrinho"
+        data-nome="Bolo de chocolate"
+        data-preco="12">
+        Adicionar ao carrinho
+    </button>
+</article>
+    </button>
+</article>
+                
+                </article>
+
+                <article class="produto">
+                    <img src= "img/bolo-de-iogurte-com-morangos.jpg" alt= "Bolo de morango">
+                    <h3>Bolo de morango</h3>
+                    <p>Delicioso bolo com morangos frescos.</p>
+                    <strong>R$ 14,00</strong>
+                    <button class="adicionar-carrinho"
+        data-nome="Bolo de Morango"
+        data-preco="14">
+        Adicionar ao carrinho
+                </article>
+
+                <article class="produto">
+                    <img src ="img/pngtree-a-slice-of-confetti-cake-with-single-birthday-candle-sitting-on-picture-image_16428777.jpg" alt="Bolo confeitado">
+                    <h3>Bolo especial</h3>
+                    <p>Uma combinação irresistível de sabores.</p>
+                    <strong>R$ 15,00</strong>
+                    <button class="adicionar-carrinho"
+        data-nome="Bolo Especial"
+        data-preco="12">
+        Adicionar ao carrinho
+                </article>
+
+            </div>
+        </section>
+
+        <section class="produtos destaque" id="tortas">
+            <h2>Tortas deliciosas</h2>
+            <p>Perfeitas para adoçar o seu dia!</p>
+
+            <div class="produtos-container">
+
+                <article class="produto">
+                    <img src="img/torta-de-limao.jpg" alt="Torta de limão">
+                    <h3>Torta de limão</h3>
+                    <p>Creme de limão com cobertura suave.</p>
+                    <strong>R$ 13,00</strong>
+                    <button class="adicionar-carrinho"
+        data-nome="Torta de limão"
+        data-preco="12">
+        Adicionar ao carrinho
+                </article>
+
+                <article class="produto">
+                    <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500" alt="Cheesecake">
+                    <h3>Cheesecake</h3>
+                    <p>Recheio cremoso e base crocante.</p>
+                    <strong>R$ 16,00</strong>
+                    <button class="adicionar-carrinho"
+        data-nome="Cheesecake"
+        data-preco="12">
+        Adicionar ao carrinho
+                </article>
+
+            </div>
+        </section>
+
+        <section class="produtos" id="doces">
+            <h2>Doces e cookies</h2>
+            <p>Pequenas delícias que fazem a diferença!</p>
+
+            <div class="produtos-container">
+
+                <article class="produto">
+                    <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500" alt="Brownie">
+                    <h3>Brownie</h3>
+                    <p>Chocolate intenso e textura macia.</p>
+                    <strong>R$ 8,00</strong>
+                    <button class="adicionar-carrinho"
+        data-nome="Brownie"
+        data-preco="12">
+        Adicionar ao carrinho
+                </article>
+
+                <article class="produto">
+                    <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500" alt="Cookies">
+                    <h3>Cookies</h3>
+                    <p>Cookies com gotas de chocolate.</p>
+                    <strong>R$ 7,00</strong>
+                    <button class="adicionar-carrinho"
+        data-nome="Cookie com gotas de chocolate"
+        data-preco="12">
+        Adicionar ao carrinho
+                </article>
+
+                <article class="produto">
+                    <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=500" alt="Cupcakes">
+                    <h3>Cupcake</h3>
+                    <p>Delicado, fofinho e cheio de sabor.</p>
+                    <strong>R$ 9,00</strong>
+                    <button class="adicionar-carrinho"
+        data-nome="Cupcake"
+        data-preco="12">
+        Adicionar ao carrinho
+                </article>
+
+            </div>
+        </section>
+
+        <section class="produtos destaque" id="bebidas">
+            <h2>Nossas bebidas</h2>
+            <p>Para acompanhar seus momentos especiais!</p>
+
+            <div class="produtos-container">
+
+                <article class="produto">
+                    <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=500" alt="Cappuccino">
+                    <h3>Cappuccino</h3>
+                    <p>Cremoso e finalizado com chocolate.</p>
+                    <strong>R$ 10,00</strong>
+                    <button class="adicionar-carrinho"
+        data-nome="Cappuccino"
+        data-preco="12">
+        Adicionar ao carrinho
+                </article>
+
+                <article class="produto">
+                    <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500" alt="Café gelado">
+                    <h3>Café gelado</h3>
+                    <p>Refrescante e cheio de sabor.</p>
+                    <strong>R$ 11,00</strong>
+                    <button class="adicionar-carrinho"
+        data-nome="Café gelado"
+        data-preco="12">
+        Adicionar ao carrinho
+                </article>
+
+                <article class="produto">
+                    <img src="img/chocolatequente.jpg" alt="Chocolate quente">
+                    <h3>Chocolate quente</h3>
+                    <p>Uma bebida quentinha e cremosa.</p>
+                    <strong>R$ 12,00</strong>
+                    <button class="adicionar-carrinho"
+        data-nome="Chocolate quente"
+        data-preco="12">
+        Adicionar ao carrinho
+                </article>
+
+            </div>
+        </section>
+
+        <section class="produtos" id="salgados">
+            <h2>Hora dos salgados!</h2>
+            <p>Opções deliciosas para qualquer momento.</p>
+
+            <div class="produtos-container">
+
+                <article class="produto">
+                    <img src="img/coxinha.jpg" alt="Salgados">
+                    <h3>Coxinha</h3>
+                    <p>Massa macia com recheio saboroso.</p>
+                    <strong>R$ 7,00</strong>
+                    <button class="adicionar-carrinho"
+        data-nome="Coxinha"
+        data-preco="12">
+        Adicionar ao carrinho
+                </article>
+
+                <article class="produto">
+                    <img src="img/paodequeijo.jpg" alt="Pão de queijo">
+                    <h3>Pão de queijo</h3>
+                    <p>Quentinho e cheio de queijo.</p>
+                    <strong>R$ 6,00</strong>
+                    <button class="adicionar-carrinho"
+        data-nome="Pão de queijo"
+        data-preco="12">
+        Adicionar ao carrinho
+                </article>
+
+                <article class="produto">
+                    <img src="img/empada.jpg" alt="Salgado assado">
+                    <h3>Empada</h3>
+                    <p>Massa delicada e recheio cremoso.</p>
+                    <strong>R$ 8,00</strong>
+                    <button class="adicionar-carrinho"
+        data-nome="Empada"
+        data-preco="12">
+        Adicionar ao carrinho
+                </article>
+
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre">
+
+            <h2>Sobre nós</h2>
+
+            <p>
+                A Confeitaria Catatau nasceu do carinho pela
+                confeitaria e da paixão por transformar
+                ingredientes em momentos especiais.
+            </p>
+
+            <p>
+                Oferecemos bolos, tortas, doces, bebidas e
+                salgados preparados com dedicação, qualidade
+                e muito amor.
+            </p>
+
+            <p>
+                Acreditamos que cada momento merece um toque
+                especial, seja em uma comemoração ou em uma
+                pausa para aproveitar um docinho.
+            </p>
+
+            <h3>Confeitaria Catatau: adoçando momentos
+                e criando memórias!</h3>
+
+        </section>
+
+        <section class="contato" id="contato">
+
+            <h2>Entre em contato!</h2>
+
+            <p>Será um prazer fazer parte dos seus momentos especiais.</p>
+
+            <p> WhatsApp: (00) 00000-0000</p>
+            <p> Instagram: @confeitariacatatau</p>
+            <p> Nosso endereço</p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <h2>Confeitaria Catatau</h2>
+        <p>Adoçando momentos e criando memórias.</p>
+        <p>© 2026 - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

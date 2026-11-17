@@ -1,0 +1,510 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFF9FC;
+    color: #59392D;
+}
+
+
+header {
+    background-color: white;
+}
+
+.topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 22px;
+    background-color: #F9E5EF;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    color: #59392D;
+    font-style: italic;
+}
+
+.topo input {
+    width: 35%;
+    padding: 14px;
+    border: 1px solid #E5C8D8;
+    border-radius: 25px;
+    font-size: 15px;
+    outline: none;
+    background-color: white;
+}
+
+.usuario, .carrinho {
+    color: #59392D;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 18px;
+    background-color: #E8DEFA;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #59392D;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #B66D91;
+}
+
+
+.banner {
+    min-height: 430px;
+    padding: 90px 55px;
+    background: linear-gradient(
+        120deg,
+        #F9E5EF,
+        #E8DEFA,
+        #DDEEFF
+    );
+
+    display: flex;
+    align-items: center;
+}
+
+.banner-texto span {
+    color: #805B4C;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.banner-texto h2 {
+    color: #59392D;
+    font-size: 42px;
+    margin-top: 18px;
+}
+
+.banner-texto h3 {
+    color: #A66C8B;
+    font-family: Georgia, serif;
+    font-size: 40px;
+    font-style: italic;
+}
+
+.banner-texto p {
+    margin-top: 18px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #59392D;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 14px 25px;
+    border-radius: 25px;
+    background-color: #805B4C;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #59392D;
+}
+
+
+.categorias {
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.categorias h2 {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.categorias-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.categorias-container a {
+    background-color: #F9E5EF;
+    color: #59392D;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.8;
+    padding: 22px 38px;
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.categorias-container a:nth-child(even) {
+    background-color: #E8DEFA;
+}
+
+.categorias-container a:hover {
+    transform: translateY(-5px);
+}
+
+
+.produtos {
+    padding: 65px 40px;
+    text-align: center;
+}
+
+.produtos h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    color: #59392D;
+}
+
+.produtos > p {
+    margin: 12px 0 35px;
+    color: #805B4C;
+}
+
+.destaque {
+    background-color: #F9EAF3;
+}
+
+.produtos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.produto {
+    background-color: white;
+    width: 280px;
+    padding: 15px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px #59392D15;
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-6px);
+}
+
+.produto img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 13px;
+}
+
+.produto h3 {
+    margin: 15px 0 8px;
+    color: #59392D;
+    font-size: 20px;
+}
+
+.produto p {
+    color: #8A7065;
+    font-size: 14px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.produto strong {
+    color: #A66C8B;
+    font-size: 19px;
+}
+
+
+.sobre {
+    background-color: #E8DEFA;
+    padding: 75px 15%;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+.sobre p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.sobre h3 {
+    margin-top: 25px;
+    color: #805B4C;
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+
+.contato {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #DDEEFF;
+}
+
+.contato h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contato p {
+    margin: 12px;
+}
+
+
+footer {
+    background-color: #59392D;
+    color: white;
+    text-align: center;
+    padding: 35px;
+}
+
+footer h2 {
+    font-family: Georgia, serif;
+    margin-bottom: 12px;
+}
+
+footer p {
+    margin: 8px;
+    color: #F9E5EF;
+}
+
+
+@media (max-width: 700px) {
+
+    .topo {
+        flex-direction: column;
+    }
+
+    .topo input {
+        width: 90%;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    .banner {
+        padding: 60px 25px;
+    }
+
+    .banner-texto h2 {
+        font-size: 32px;
+    }
+
+    .banner-texto h3 {
+        font-size: 30px;
+    }
+
+    .produtos {
+        padding: 45px 15px;
+    }
+
+    .sobre {
+        padding: 55px 25px;
+    }
+}
+
+.produtos {
+    padding: 70px 8%;
+    margin: 30px 0;
+    background-color: #FFF9FC;
+    border-radius: 25px;
+}
+
+.produtos.destaque {
+    background-color: #F9E5EF;
+}
+
+#bolos {
+    background-color: #FFF9FC;
+}
+
+#tortas {
+    background-color: #F1E9FC;
+}
+
+#doces {
+    background-color: #FFF2F7;
+}
+
+#bebidas {
+    background-color: #EAF3FC;
+}
+
+#salgados {
+    background-color: #F8EDE4;
+}
+
+.painel-carrinho {
+    display: none;
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 320px;
+    max-width: calc(100% - 40px);
+    max-height: 75vh;
+    overflow-y: auto;
+    padding: 20px;
+    background: white;
+    border: 2px solid #E8DEFA;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px #59392D30;
+    z-index: 1000;
+}
+
+.painel-carrinho.aberto {
+    display: block;
+}
+
+.adicionar-carrinho,
+.painel-carrinho button {
+    background: #E8DEFA;
+    color: #59392D;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.adicionar-carrinho:hover,
+.painel-carrinho button:hover {
+    background: #F9E5EF;
+}
+
+.item-carrinho {
+    border-bottom: 1px solid #E8DEFA;
+    padding: 10px 0;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #59392D;
+}
+
+h1, h2, .logo {
+    font-family: 'Dancing Script', cursive;
+    color: #59392D;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+h3 {
+    color: #59392D;
+}
+#ir-pagamento {
+    background-color: #59392D;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal-pagamento {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #00000080;
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-pagamento.aberto {
+    display: flex !important;
+}
+
+
+.conteudo-pagamento {
+    background: #FFF9FC;
+    color: #59392D;
+    width: 420px;
+    max-width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 30px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.conteudo-pagamento h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.conteudo-pagamento label {
+    display: block;
+    background: #F9E5EF;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.conteudo-pagamento input {
+    margin-right: 10px;
+}
+
+#resumo-pedido {
+    margin: 20px 0;
+    padding: 15px;
+    background: #E8DEFA;
+    border-radius: 15px;
+}
+
+#confirmar-pedido {
+    width: 100%;
+    background: #59392D;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.fechar {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: none;
+    background: transparent;
+    color: #59392D;
+    font-size: 20px;
+    cursor: pointer;
+}
